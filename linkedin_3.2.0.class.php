@@ -72,7 +72,8 @@
  */    
 if(!extension_loaded('oauth')) {
   // the PECL OAuth extension is not present, load our third-party OAuth library
-  require_once('OAuth.php');
+// OAuth.php should be autoloaded
+//  require_once('OAuth.php');
 } else {
   // the PECL extension is present, which is not compatible with this library
   throw new LinkedInException('Simple-LinkedIn: library not compatible with installed PECL OAuth extension.  Please disable this extension to use the Simple-LinkedIn library.');
