@@ -1,0 +1,13 @@
+{
+    "name": "jojari/simple-linkedin-php",
+    "description": "",
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "autoload": {
+            "classmap": [""]
+        }
+    },
+    "minimum-stability": "dev"
+}
