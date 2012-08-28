@@ -6,7 +6,7 @@
     },
     "autoload": {
         "autoload": {
-            "classmap": [""]
+            "classmap": ["linkedin_3.2.0.class.php"]
         }
     },
     "minimum-stability": "dev"
