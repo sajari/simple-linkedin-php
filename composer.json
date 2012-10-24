@@ -2,10 +2,11 @@
     "name": "jojari/simple-linkedin-php",
     "description": "A simple, stand-alone wrapper for the most-used functionality of the LinkedIn API platform",
     "keywords": ["linkedin", "api", "linkedin-api", "oauth", "platform", "php-linkedin", "wrapper"],
-    "license": "UNKNOWN",
+    "license": "MIT",
     "authors": [
         {
-            "name": "fiftyMission Inc."
+            "name": "Paul Mennega",
+            "email": "paul@fiftymission.net"
         },
         {
             "name": "Jonathan Ingram"
