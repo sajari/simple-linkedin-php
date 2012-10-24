@@ -1,11 +1,21 @@
 {
     "name": "jojari/simple-linkedin-php",
-    "description": "",
+    "description": "A simple, stand-alone wrapper for the most-used functionality of the LinkedIn API platform",
+    "keywords": ["linkedin", "api", "linkedin-api", "oauth", "platform", "php-linkedin", "wrapper"],
+    "license": "UNKNOWN",
+    "authors": [
+        {
+            "name": "fiftyMission Inc."
+        },
+        {
+            "name": "Jonathan Ingram"
+        }
+    ],
     "require": {
         "php": ">=5.3.3"
     },
     "autoload": {
-        "classmap": [""]
+        "classmap": ["linkedin_3.2.0.class.php"]
     },
     "minimum-stability": "dev"
 }
