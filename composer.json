@@ -16,7 +16,7 @@
         "php": ">=5.3.3"
     },
     "autoload": {
-        "classmap": ["linkedin_3.2.0.class.php"]
+        "classmap": ["linkedin_3.2.0.1.class.php"]
     },
     "minimum-stability": "dev"
 }
