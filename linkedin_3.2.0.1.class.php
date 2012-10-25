@@ -58,7 +58,7 @@
  *    
  * REST API Documentation: http://developer.linkedin.com/rest
  *    
- * @version 3.2.0 - November 8, 2011
+ * @version 3.2.0.1 - October 25, 2012
  * @author Paul Mennega <paul@fiftymission.net>
  * @copyright Copyright 2011, fiftyMission Inc. 
  * @license http://www.opensource.org/licenses/mit-license.php The MIT License 
@@ -138,7 +138,7 @@ class LinkedIn {
 	const _URL_REVOKE                  = 'https://api.linkedin.com/uas/oauth/invalidateToken';
 	
 	// Library version
-	const _VERSION                     = '3.2.0';
+	const _VERSION                     = '3.2.0.1';
   
   // oauth properties
   protected $callback;
@@ -1845,15 +1845,24 @@ class LinkedIn {
 	 * Request token retrieval.
 	 * 
 	 * Get the request token from the Linkedin API.
-	 * 
+	 *
+     * @param array $scope
+     *
 	 * @return arr
 	 *    The Linkedin OAuth/http response, in array format.      	 
 	 */
-	public function retrieveTokenRequest() {
+	public function retrieveTokenRequest(array $scope = array()) {
     $parameters = array(
       'oauth_callback' => $this->getCallbackUrl()
     );
-    $response = $this->fetch(self::_METHOD_TOKENS, self::_URL_REQUEST, NULL, $parameters);
+
+    $requestUrl = self::_URL_REQUEST;
+
+    if (!empty($scope)) {
+        $requestUrl .= '?scope=' . implode('+', $scope);
+    }
+
+    $response = $this->fetch(self::_METHOD_TOKENS, $requestUrl, NULL, $parameters);
     parse_str($response['linkedin'], $response['linkedin']);
     
     /**
