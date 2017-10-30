@@ -177,16 +177,7 @@ class LinkedIn {
 	  $this->setApplicationSecret($config['appSecret']);
 	  $this->setCallbackUrl($config['callbackUrl']);
 	}
-	
-	/**
-   * The class destructor.
-   * 
-   * Explicitly clears LinkedIn object from memory upon destruction.
-	 */
-  public function __destruct() {
-    unset($this);
-	}
-	
+
 	/**
 	 * Bookmark a job.
 	 * 
